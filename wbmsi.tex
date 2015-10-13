@@ -64,7 +64,7 @@ Most often, this communication flows from logic components, which direct the
 planned accelerator behaviour, to physical interfaces, which perform the
 external signalling to control magnets, measurement equipment, and displays.
 However, sometimes this communication flow must be reversed.
-If a magnet power supply encouters an error condition, 
+If a magnet power supply encounters an error condition, 
 it must be able to notify the components which control the system.
 The Wishbone standard does not include such a mechanism,
 and a traditional interrupt-based system is inadequate for our needs.
@@ -166,7 +166,7 @@ our larger bus allows us to cleanly separate our code from theirs.
   \label{fig:complex-bus}
 \end{figure}
 
-In any case, once you have multipe nested crossbars, you end up with a
+In any case, once you have multiple nested crossbars, you end up with a
 Directed Acyclic Graph (DAG) like in Figure~\ref{fig:complex-bus}.
 As shown, we have masters $1$, $2$, and $3$ connected to slaves $a$, $b$, and $c$.
 Of course, a real system would probably include far more masters and slaves on each
@@ -182,7 +182,7 @@ us reason about the system as a whole.
 As already explained,
 only masters initiate the exchange of messages in the Wishbone bus.
 If a slave has information for a master, it must wait for the master to read it.
-Unfortunately, this model is too simplisitic.
+Unfortunately, this model is too simplistic.
 Consider a slave which rarely has anything to tell its master,
 but sometimes it has an urgent message that must be delivered immediately.
 In this case, the master must wastefully read the slave repeatedly, forever.
@@ -340,7 +340,7 @@ because it \emph{is} Wishbone.
 \end{figure}
 
 One detail we have ignored till now in Wishbone is how crossbars compose
-addresses recurisvely.
+addresses recursively.
 The general idea is that a Wishbone slave should ignore the high bits it
 does not use itself.
 Thus, the GPIO in Figure~\ref{fig:addressing} only pays attention to the low 
@@ -350,7 +350,7 @@ inspects the 6th address bit to decide if an operation goes to the LED or
 the GPIO.
 This means that when accessed via this crossbar, 
 the GPIO register 0x4 has address 0x24 outside the crossbar.
-Similarily, from the CPU's point-of-view, that GPIO register has address 0x124.
+Similarly, from the CPU's point-of-view, that GPIO register has address 0x124.
 
 However, this compositional approach leads to something a bit surprising.
 That same GPIO register has address 0x224 from the point-of-view of 
@@ -369,7 +369,7 @@ A Wishbone master recursively reads these SDB records,
 exploring all paths through the bus and composing their associated addresses.
 
 When a master finds two identical devices via SDB exploration,
-it presumably wants to tell them appart.
+it presumably wants to tell them apart.
 This is the job of the device driver.
 SDB will tell you that there are two paths to LED devices.
 The driver must query the LED slaves to discover that one LED slave

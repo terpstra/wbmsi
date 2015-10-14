@@ -37,13 +37,14 @@ approach is to use message signalled interrupts (MSI). This is especially
 important as a particular slave may be controlled by different masters
 depending on the use-case. MSI allows the routing of interrupts via the same
 topology used in master-slave control. This paper explores the benefits,
-disadvantages, and challenges uncovered by our implementation.
+disadvantages, and challenges uncovered by our current implementation.
 \end{abstract}
 
 \section{Introduction}
 
 To coordinate accelerator activities at GSI, we need a hard real-time control system.
-The hard real-time components of the control system are implemented using FPGAs.
+The hard real-time components of the control system are implemented using 
+logic chips whose wiring can be reprogrammed in the field, called FPGAs.
 This makes it possible for our existing hardware to accommodate some of the
 changing requirements that arise as physicists revise their research goals.
 It also means that we have a great deal of flexibility in terms of how we
@@ -108,7 +109,7 @@ the field from one strength to another.
 Reading from one address might report the current field strength,
 while another address could report current or voltage.
 In any case,
-all Wishbone slaves have a fixed number of addresses which interest them.
+Wishbone slaves have a fixed number of addresses that a master can read or write.
 
 \begin{figure}[t]
   \centering
@@ -120,7 +121,7 @@ all Wishbone slaves have a fixed number of addresses which interest them.
 
 While a point-to-point protocol is already useful for combining two components,
 sophisticated systems generally need to connect more than two components together.
-This is the role of a Wishbone crossbar, as illustrated in Figure~\ref{fig:crossbar}.
+This is the role of a Wishbone crossbar switch, as illustrated in Figure~\ref{fig:crossbar}.
 The crossbar implements several slave ports, suitable for connecting
 Wishbone masters, and several master ports, suitable for connecting slaves.
 Inside the crossbar are wires which allow each master to send messages to each slave.
@@ -138,21 +139,20 @@ However, as shown in Figure~\ref{fig:crossbar}, two different masters can
 communicate with two different slaves, without waiting.
 
 A single crossbar is already enough to build quite complicated systems.
-However, as the design grows, multiple crossbars start to appear.
-One physical reason this might be necessary is for a pluggable slot.
-The cards inserted into the slot might contain several slaves,
-connected together by a card crossbar.
-The board hosting the slot also has some masters and slaves, 
+However, as the design grows in complexity, multiple crossbars start to appear.
+Consider, for example, a host motherboard with slots for inserting addon cards.
+The inserted cards might contain several slaves, connected together by a card crossbar.
+The motherboard hosting the slots likely also has some masters and slaves, 
 connected by a host crossbar.
-When the card is inserted, the host masters would like to access the slaves
-in the card.
-This is achieved by placing a connecting a master port of the host crossbar 
+When the card is inserted, the masters in the hosting motherboard 
+would like to access the slaves in the addon card.
+This is achieved by connecting a master port of the host crossbar 
 to a slave port of the card crossbar.
 Now the host masters have access to the host slaves and, via the
 crossbar-crossbar connection, the card slaves.
 
-Beyond the physically mandated need for nested crossbars,
-this pattern is also a useful organizational tool.
+Beyond the physical need for nested crossbars in the previous example,
+nesting crossbars is also a useful organizational tool.
 For example, CERN provides a small White Rabbit (WR) crossbar with masters
 and slaves that cooperate to precisely synchronize clocks~\cite{wr}.
 We use this WR design as a component in our larger system.
@@ -186,7 +186,7 @@ Unfortunately, this model is too simplistic.
 Consider a slave which rarely has anything to tell its master,
 but sometimes it has an urgent message that must be delivered immediately.
 In this case, the master must wastefully read the slave repeatedly, forever.
-This is not really feasible, so we need a way for slaves to signal to
+This is not always feasible, so we need a way for slaves to signal to
 masters that they need service.
 
 \begin{figure}[t]
@@ -272,9 +272,9 @@ Furthermore, the MSI bus logic tends to be simpler on both sides,
 because only writes are allowed.
 Nevertheless, there is an area price to be paid for this approach.
 We consider this an acceptable trade-off inside an FPGA.
-When Wishbone leaves the chip, depending on the interface, we sometimes
-use interrupt lines behind the scenes, and tunnel MSI between chips.
-However, this detail is invisible to masters and slaves, and is just an
+When Wishbone leaves the FPGA, depending on the interface, we sometimes
+use interrupt lines behind the scenes to tunnel the MSI messages.
+However, this detail is invisible to masters and slaves and is just an
 implementation detail for Wishbone bridges.
 
 \begin{figure}[t]
@@ -294,14 +294,14 @@ However, 16 address bits suffice for 64K interrupt lines, which should cover mos
 The MSI crossbars route messages from slaves to masters using addresses just like normal
 crossbars route from master to slave.
 
-Slaves should offer a configurable register to set the MSI address for each type of
-notification they will send.
-They should also have an enable register that indicates if that type of
+For each type of notification they will send,
+slaves should provide a configuration register to set the MSI target address.
+They should also provide an enable register that indicates if that type of
 notification should be sent at all.
-When a master wants to receive MSIs, he puts his own address into this register
-and enables the notification.
+When a master wants to receive MSIs, he puts his own address into this
+target address register and enables the notification.
 When the slave wants to notify the master, if this notification is enabled,
-he sends a MSI out the MSI Wishbone bus to the configured address.
+he sends a MSI out the MSI Wishbone bus to the configured MSI target address.
 
 The data field of the MSI can be use for parameters within a notification.
 For example, consider a slave with a FIFO.
@@ -355,7 +355,7 @@ Similarly, from the CPU's point-of-view, that GPIO register has address 0x124.
 However, this compositional approach leads to something a bit surprising.
 That same GPIO register has address 0x224 from the point-of-view of 
 the Control master.
-The correct way to understand an address is that it \textbf{describes a path}, 
+The correct way to understand this is that \textbf{an address describes a path}, 
 not a destination.
 The address 0x224 tells you how to get from the Control master to register
 0x4 of the GPIO.

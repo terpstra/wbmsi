@@ -15,7 +15,6 @@
   <graph edgedefault="directed" id="G">
     <data key="d0"/>
     <node id="n0">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="152.66666666666674" y="181.0"/>
@@ -32,7 +31,6 @@
       </data>
     </node>
     <node id="n1">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="377.0000000000001" y="238.0"/>
@@ -49,51 +47,46 @@
       </data>
     </node>
     <node id="n2">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="258.66666666666674" y="181.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
       </data>
     </node>
     <node id="n3">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="377.0000000000001" y="181.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
       </data>
     </node>
     <node id="n4">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="377.0000000000001" y="124.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="495.3333333333335" y="124.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
       </data>
     </node>
     <node id="n6">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="258.66666666666674" y="124.0"/>
@@ -110,7 +103,6 @@
       </data>
     </node>
     <node id="n7">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="377.0000000000001" y="67.0"/>
@@ -127,7 +119,6 @@
       </data>
     </node>
     <node id="n8">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="495.3333333333335" y="181.0"/>
@@ -144,7 +135,6 @@
       </data>
     </node>
     <node id="n9">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="605.0000000000002" y="124.0"/>
@@ -161,7 +151,6 @@
       </data>
     </node>
     <edge id="e0" source="n0" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -172,7 +161,6 @@
       </data>
     </edge>
     <edge id="e1" source="n2" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -183,7 +171,6 @@
       </data>
     </edge>
     <edge id="e2" source="n3" target="n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-3.8400000000000034" tx="0.0" ty="-3.8400000000000034"/>
@@ -194,7 +181,6 @@
       </data>
     </edge>
     <edge id="e3" source="n2" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="23.0" sy="7.5137024" tx="0.0" ty="0.0">
@@ -208,7 +194,6 @@
       </data>
     </edge>
     <edge id="e4" source="n2" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-7.711999999999961" tx="0.0" ty="6.706240000000008">
@@ -222,7 +207,6 @@
       </data>
     </edge>
     <edge id="e5" source="n6" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-4.915199999999999" tx="0.0" ty="-4.915199999999999"/>
@@ -233,7 +217,6 @@
       </data>
     </edge>
     <edge id="e6" source="n4" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="6.0" tx="0.0" ty="6.0"/>
@@ -244,7 +227,6 @@
       </data>
     </edge>
     <edge id="e7" source="n7" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-4.095999999999989">
@@ -258,7 +240,6 @@
       </data>
     </edge>
     <edge id="e8" source="n5" target="n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="5.760000000000005" tx="0.0" ty="5.760000000000005"/>
@@ -269,7 +250,6 @@
       </data>
     </edge>
     <edge id="e9" source="n1" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -283,7 +263,6 @@
       </data>
     </edge>
     <edge id="e10" source="n8" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="6.260000000000076">
@@ -297,7 +276,6 @@
       </data>
     </edge>
     <edge id="e11" source="n9" target="n7">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-1.9274400000002174" ty="-6.406666666666581">

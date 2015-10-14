@@ -50,7 +50,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="284.3333333333335" y="226.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
@@ -60,7 +60,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="402.66666666666686" y="226.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
@@ -70,7 +70,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="402.66666666666686" y="169.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>
@@ -80,7 +80,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="27.0" width="46.0" x="521.0000000000002" y="169.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="sides" modelPosition="n" textColor="#000000" visible="true" width="4.0" x="21.0" y="-8.0"/>
         </y:GenericNode>

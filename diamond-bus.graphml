@@ -18,7 +18,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="68.0" width="81.0" x="414.2574257425755" y="109.5"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="45.90625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="67.609375" x="6.6953125" y="11.046875">0x00-0x1F
 
@@ -62,7 +62,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="68.0" width="89.75" x="291.33333333333417" y="62.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="45.90625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="82.146484375" x="3.8017578125" y="11.046875">0x100-0x1FF
 
@@ -76,7 +76,7 @@
           <y:Geometry height="27.0" width="81.0" x="414.2574257425755" y="67.0"/>
           <y:Fill color="#FFD471" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="52.802734375" x="14.098632812499943" y="4.515625">Memory<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="52.802734375" x="14.0986328125" y="4.515625">Memory<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -106,7 +106,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="25.0" width="49.0" x="343.33333333333417" y="120.8"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="29.08984375" x="9.955078125" y="3.515625000000014">SDB</y:NodeLabel>
         </y:GenericNode>
@@ -116,7 +116,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="25.0" width="49.0" x="467.2574257425755" y="169.7768"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="29.08984375" x="9.955078125" y="3.515625">SDB</y:NodeLabel>
         </y:GenericNode>
@@ -126,7 +126,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="68.0" width="89.75" x="291.33333333333417" y="193.0"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="45.90625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="82.146484375" x="3.8017578125" y="11.046875">0x100-0x1FF
 
@@ -154,7 +154,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="25.0" width="49.0" x="343.33333333333417" y="251.8"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="29.08984375" x="9.955078125" y="3.515625">SDB</y:NodeLabel>
         </y:GenericNode>
@@ -180,7 +180,7 @@
       <data key="d6">
         <y:GenericNode configuration="ShinyPlateNodeWithShadow">
           <y:Geometry height="68.0" width="89.91666666666487" x="178.49257425742795" y="127.5"/>
-          <y:Fill color="#7190FF" transparent="false"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="45.90625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="81.947265625" x="3.9847005208324333" y="11.046875">0x1000-1FFF
 
@@ -201,6 +201,16 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d6">
+        <y:GenericNode configuration="ShinyPlateNodeWithShadow">
+          <y:Geometry height="25.0" width="49.0" x="226.40924092409284" y="187.60000000000002"/>
+          <y:Fill color="#91B0FF" transparent="false"/>
+          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="29.08984375" x="9.955078125" y="3.515625">SDB</y:NodeLabel>
         </y:GenericNode>
       </data>
     </node>
@@ -307,8 +317,8 @@
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="15.5" tx="-32.13820132013274" ty="-7.0">
-            <y:Point x="275.36757425742707" y="177.0"/>
-            <y:Point x="275.36757425742707" y="220.0"/>
+            <y:Point x="279.8712871287135" y="177.0"/>
+            <y:Point x="279.8712871287135" y="220.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>

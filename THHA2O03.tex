@@ -443,7 +443,32 @@ To realize our design,
 it is necessary to revise SDB~\cite{sdb} so that masters may
 discover their own addresses when configuring slaves for MSI.
 
-\bibliographystyle{abbrvnat}
-\bibliography{wbmsi}
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Herveille(2010)]{wb}
+R.~Herveille.
+\newblock {WISHBONE System-on-Chip (SoC) Interconnection Architecture for
+  Portable IP Cores - Revision B.4}, 2010.
+\newblock URL \url{http://opencores.org/opencores,wishbone}.
+
+\bibitem[Moreira et~al.(2009)Moreira, Serrano, Wlostowski, Loschmidt, and
+  Gaderer]{wr}
+P.~Moreira, J.~Serrano, T.~Wlostowski, P.~Loschmidt, and G.~Gaderer.
+\newblock {White Rabbit: Sub-Nanosecond Timing Distribution over Ethernet}.
+\newblock In \emph{International IEEE Symposium on Precision Clock
+  Synchronization for Measurement, Control and Communication}. IEEE, 2009.
+
+\bibitem[Rubini et~al.(2013)Rubini, Terpstra, and Vanga]{sdb}
+A.~Rubini, W.~W. Terpstra, and M.~Vanga.
+\newblock {Self-Describing Bus (SDB) Specification for Logic Cores - Version
+  1.1}, April 2013.
+\newblock URL \url{http://www.ohwr.org/projects/sdb}.
+
+\end{thebibliography}
 
 \end{document}

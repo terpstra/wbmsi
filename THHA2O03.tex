@@ -82,7 +82,7 @@ Self-Describing Bus standard~\cite{sdb}.
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{wb-ptp}
+  \includegraphics*[width=\columnwidth]{THHA2O03f1}
   \caption{Wishbone connects one master to one slave. 
   Masters initiate requests. Slaves respond with
   success or failure.}
@@ -113,7 +113,7 @@ Wishbone slaves have a fixed number of addresses that a master can read or write
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{crossbar}
+  \includegraphics*[width=\columnwidth]{THHA2O03f2}
   \caption{A crossbar providing two slave ports and three
   master ports. It internally connects each master to one slave.}
   \label{fig:crossbar}
@@ -161,7 +161,7 @@ our larger bus allows us to cleanly separate our code from theirs.
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{complex-bus}
+  \includegraphics*[width=\columnwidth]{THHA2O03f3}
   \caption{Real systems often include many nested crossbars.}
   \label{fig:complex-bus}
 \end{figure}
@@ -191,7 +191,7 @@ masters that they need service.
 
 \begin{figure}[t]
   \centering
- \includegraphics*[width=\columnwidth]{bad-irq}
+ \includegraphics*[width=\columnwidth]{THHA2O03f4}
   \caption{Interrupt lines connect a slave to one fixed master.}
   \label{fig:bad-irq}
 \end{figure}
@@ -267,7 +267,7 @@ we implement this using a second Wishbone bus.
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{good-msi}
+  \includegraphics*[width=\columnwidth]{THHA2O03f5}
   \caption{MSI reverses Wishbone, allowing each slave to send notifications to
   any of the masters which can control it.}
   \label{fig:good-msi}
@@ -336,7 +336,7 @@ It is an implementation detail of the Wishbone bridge.
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{addressing}
+  \includegraphics*[width=\columnwidth]{THHA2O03f6}
   \caption{Wishbone routing is recursive. Slaves and crossbars
   ignore the high address bits matched earlier on the path.}
   \label{fig:addressing}
@@ -380,7 +380,7 @@ should bink to indicate network activity and the other indicates power.
 
 \begin{figure}[t]
   \centering
-  \includegraphics*[width=\columnwidth]{diamond-bus}
+  \includegraphics*[width=\columnwidth]{THHA2O03f7}
   \caption{With shared bus resources, a master (Host CPU)
   sometimes sees a slave (Mailbox) twice under two addresses.}
   \label{fig:diamond-bus}

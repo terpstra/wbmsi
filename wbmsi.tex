@@ -209,7 +209,7 @@ Once the data has been read out, the slave deasserts the interrupt.
 The advantage of this approach is that it is very inexpensive.
 It only requires a single wire from slave to master.
 In an FPGA, this benefit is not really important, 
-but on an PCB this can be a decisive factor.
+but on a PCB this can be a decisive factor.
 However, while cheap, this approach has serious shortcomings.
 
 Firstly, an interrupt line typically connects one slave to one master.
@@ -262,20 +262,8 @@ In a very real sense, this flips the role of masters and slaves;
 see Figure~\ref{fig:good-msi}.
 Wherever there was a crossbar, it is now the slaves which initiate the
 message and the masters which receive them.
-
-In our concrete implementation, 
+In our system design,
 we implement this using a second Wishbone bus.
-Clearly this could double the interconnect cost in the worst-case.
-However, slaves which do not generate MSIs can be omitted,
-as can masters which do not receive MSIs.
-Furthermore, the MSI bus logic tends to be simpler on both sides,
-because only writes are allowed.
-Nevertheless, there is an area price to be paid for this approach.
-We consider this an acceptable trade-off inside an FPGA.
-When Wishbone leaves the FPGA, depending on the interface, we sometimes
-use interrupt lines behind the scenes to tunnel the MSI messages.
-However, this detail is invisible to masters and slaves and is just an
-implementation detail for Wishbone bridges.
 
 \begin{figure}[t]
   \centering
@@ -286,13 +274,13 @@ implementation detail for Wishbone bridges.
 \end{figure}
 
 On the MSI Wishbone bus, masters are now essentially Wishbone slaves.
-For clarity, we will always denote master vs. slave from the point-of-view of
+For clarity, we will always denote master versus slave from the point-of-view of
 the regular Wishbone bus.
 Since masters now receive MSI Wishbone messages, they should provide a small address space.
 Each address in this space is analogous to a distinct interrupt line.
-However, 16 address bits suffice for 64K interrupt lines, which should cover most uses.
-The MSI crossbars route messages from slaves to masters using addresses just like normal
-crossbars route from master to slave.
+However, 16 address bits suffice for 64K interrupt lines, enough for most uses.
+The MSI crossbars route messages from slaves to masters just like the normal
+crossbars from master to slave.
 
 For each type of notification they will send,
 slaves should provide a configuration register to set the MSI target address.
@@ -311,11 +299,11 @@ The empty notification has either a 0 or 1 in its data field and is sent
 when the FIFO changes between empty and not empty.
 Likewise, the full notification sends a 0 or 1.
 If enabled, the fill notification would be sent whenever the level
-changes, indicating the new level.
+changes, indicating the new level in the data field.
 
 Compared to interrupt lines, this approach resolves all of our concerns.
 Firstly, any master which can control a slave can receive MSIs from that slave;
-the bus topology is a perfect mirror image.
+the bus topology has all arrows between them reversed.
 Secondly, the masters have many thousands of MSI addresses, and can
 instruct distinct slaves to use distinct MSI addresses.
 Thus, a master immediately knows which slave sent the message based on the target address.
@@ -328,6 +316,21 @@ disable the empty notification, and connect the fill notification to an
 unimportant queue.
 Finally, the MSI approach is just as composable as Wishbone,
 because it \emph{is} Wishbone.
+
+Clearly, this approach could double the interconnect cost in the worst-case.
+However, slaves which do not generate MSIs can be omitted,
+as can masters which do not receive MSIs.
+Furthermore, MSI bus logic tends to be simpler on both sides,
+because only writes are allowed.
+Nevertheless, there is an area price to be paid for this approach.
+We consider this an acceptable trade-off inside an FPGA.
+
+As an optimization, when Wishbone leaves the FPGA, 
+we sometimes use interrupt lines behind the scenes.
+In this case, a cheap interrupt-based external protocol
+is used to tunnel Wishbone and MSI messages.
+However, this use of interrupt lines is invisible to Wishbone masters and slaves.
+It is an implementation detail of the Wishbone bridge.
 
 \section{Addressing and Self-Description}
 
@@ -373,7 +376,7 @@ it presumably wants to tell them apart.
 This is the job of the device driver.
 SDB will tell you that there are two paths to LED devices.
 The driver must query the LED slaves to discover that one LED slave
-indicates network activity and the other indicates power.
+should bink to indicate network activity and the other indicates power.
 
 \begin{figure}[t]
   \centering
